@@ -11,8 +11,8 @@ This specification is organized by module of the reference python implementation
 
 **Note:** The modules don't have to be implemented in the same way as in the reference implementation, but all of the functionality here needs to be provided.
 
-**Total documented items:** 211
-**Modules documented:** 45
+**Total documented items:** 213
+**Modules documented:** 47
 
 ## Core Modules
 
@@ -225,6 +225,16 @@ Plugin implementations that extend UTCP with specific transport protocols and ca
 ### [communication_protocols.mcp.src.utcp_mcp.mcp_communication_protocol](./plugins/communication_protocols/mcp/src/utcp_mcp/mcp_communication_protocol.md)
 
 - **Contains:** 1 classes, 3 methods
+
+
+### [communication_protocols.socket.src.utcp_socket.tcp_communication_protocol](./plugins/communication_protocols/socket/src/utcp_socket/tcp_communication_protocol.md)
+
+- **Contains:** 1 methods
+
+
+### [communication_protocols.socket.src.utcp_socket.udp_communication_protocol](./plugins/communication_protocols/socket/src/utcp_socket/udp_communication_protocol.md)
+
+- **Contains:** 1 methods
 
 
 ### [communication_protocols.text.src.utcp_text.text_call_template](./plugins/communication_protocols/text/src/utcp_text/text_call_template.md)

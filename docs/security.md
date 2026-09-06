@@ -99,7 +99,7 @@ Secure your UTCP manual endpoints:
 
 Reference clients enforce these rules regardless of configuration; design tools and manuals against them:
 
-- **Allowed destinations**: every URL a client connects to (manual discovery, tool invocation, OAuth2 token endpoints, MCP server URLs) must use HTTPS/WSS, or plain HTTP/WS to a literal loopback address only. Plain HTTP to any other host is rejected.
+- **Allowed destinations**: every URL a client connects to (manual discovery, tool invocation, OAuth2 token endpoints, MCP server URLs) must use HTTPS/WSS, or plain HTTP/WS to a literal loopback address only. Plain HTTP/WS to any other host is rejected.
 - **Redirects**: each hop is re-validated against the same rule, and credentials (auth headers, cookies, query keys, request bodies) are not forwarded across origins.
 - **No redirection at loopback**: a manual or OpenAPI specification discovered from a non-loopback origin may not declare tool or server URLs on the loopback interface. The local-development exemption is decided by the final origin after redirects, so a loopback URL that redirects to a remote origin does not keep it.
 - **OAuth2 token endpoints**: validated by the destination rule before any credentials are sent, with redirects handled under the same rule; tokens are cached per full credential configuration and never shared between configurations that only share a client id.

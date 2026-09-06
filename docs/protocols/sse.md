@@ -331,7 +331,7 @@ data: {"message": "Simple data without event type"}
 | Clean End of Stream | The server closes the stream normally | The tool call completes; never triggers a reconnect |
 | Parse Error | Event `data` is not valid JSON | Yielded as a raw string |
 | Authentication Failed | HTTP 401/403 response | Raised immediately |
-| Server Error | HTTP 4xx/5xx response | Raised immediately |
+| Other HTTP Error | Any other 4xx or 5xx response | Raised immediately |
 
 ## Best Practices
 
@@ -361,7 +361,7 @@ data: {"message": "Simple data without event type"}
 ```
 
 ### OAuth2 Token Management
-- **Automatic token caching**: Tokens cached by client_id
+- **Automatic token caching**: Tokens cached per full credential configuration
 - **Token refresh**: Automatic token refresh on expiration
 - **Client credentials flow**: Supports OAuth2 client credentials grant
 
